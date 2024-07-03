@@ -1,5 +1,7 @@
 """Helpers definition."""
 
+from __future__ import annotations
+
 from datetime import datetime
 from typing import Any
 
@@ -37,7 +39,7 @@ def fuel_from_json(json: dict[str, Any]) -> Fuel:
     return Fuel(
         id=json.get("id", 0),
         price=json.get("price", 0),
-        name=json.get("name", ""),
+        name=json.get("name", json.get("description", "")),
         fuel_id=json.get("fuelId", 0),
         is_self=json.get("isSelf", False),
         insert_date=datetime.fromisoformat(json["insertDate"])

@@ -1,14 +1,18 @@
 """Common fixtures for the Ecovacs tests."""
 
-from collections.abc import AsyncGenerator, Generator
+from __future__ import annotations
+
 import logging
-from typing import Any
+from typing import TYPE_CHECKING, Any
 from unittest.mock import patch
 
 from aiohttp import ClientSession
 import pytest
 
 from osservaprezzi.client import Osservaprezzi
+
+if TYPE_CHECKING:
+    from collections.abc import AsyncGenerator, Generator
 
 
 @pytest.fixture
