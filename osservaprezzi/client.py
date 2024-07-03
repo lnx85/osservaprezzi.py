@@ -40,16 +40,12 @@ class Osservaprezzi:
     async def get_brands(self) -> list[Brand]:
         """Get brands."""
         json = await self._get(PATH_API_BRANDS)
-        if "loghi" in json:
-            return [brand_from_json(data) for data in json["loghi"]]
-        return []
+        return [brand_from_json(data) for data in json.get("loghi", [])]
 
     async def get_fuels(self) -> list[Fuel]:
         """Get registered fuels."""
         json = await self._get(PATH_API_FUELS)
-        if "results" in json:
-            return [fuel_from_json(data) for data in json["results"]]
-        return []
+        return [fuel_from_json(data) for data in json.get("results", [])]
 
     async def get_stations(
         self,
@@ -63,16 +59,12 @@ class Osservaprezzi:
         if fuel_type is not None:
             payload["fuelType"] = fuel_type
         json = await self._post(PATH_API_ZONES, payload)
-        if "results" in json:
-            return [station_from_json(data) for data in json["results"]]
-        return []
+        return [station_from_json(data) for data in json.get("results", [])]
 
     async def get_station(self, station_id: int) -> Station | None:
         """Get station."""
         json = await self._get(PATH_API_SERVICE_AREA % station_id)
-        if "id" in json:
-            return station_from_json(json)
-        return None
+        return station_from_json(json) if "id" in json else None
 
     async def _get(self, path: str) -> dict[str, Any]:
         """Perform a GET request."""
