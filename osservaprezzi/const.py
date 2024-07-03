@@ -9,7 +9,6 @@ PATH_API_FUELS = "registry/fuels"
 PATH_API_ZONES = "search/zone"
 PATH_API_SERVICE_AREA = "registry/servicearea/%d"
 REQUEST_HEADERS = {
-    # pylint: disable-next=line-too-long
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:128.0) Gecko/20100101 Firefox/128.0",
     "Origin": "https://carburanti.mise.gov.it",
     "Host": "carburanti.mise.gov.it",
