@@ -14,6 +14,9 @@ cover/
 # Ignore Vscode files
 .vscode
 
+# Ignore MacOS files
+.DS_Store
+
 *.egg-info/
 .noseids
 nosetests.xml
