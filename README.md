@@ -1,5 +1,11 @@
 # Client Library for Osservaprezzi
 
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=lnx85_osservaprezzi-py&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=lnx85_osservaprezzi-py) [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=lnx85_osservaprezzi-py&metric=security_rating)](https://sonarcloud.io/dashboard?id=lnx85_osservaprezzi-py) [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=lnx85_osservaprezzi-py&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=lnx85_osservaprezzi-py) [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=lnx85_osservaprezzi-py&metric=ncloc)](https://sonarcloud.io/dashboard?id=lnx85_osservaprezzi-py) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=lnx85_osservaprezzi-py&metric=coverage)](https://sonarcloud.io/dashboard?id=lnx85_osservaprezzi-py)
+
+Please report any [issues](https://github.com/lnx85/osservaprezzi.py/issues) and feel free to raise [pull requests](https://github.com/lnx85/osservaprezzi.py/pulls).
+
+[![BuyMeCoffee](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/lnx85)
+
 ## Installation
 
 If you have a recent version of Python 3, you should be able to
