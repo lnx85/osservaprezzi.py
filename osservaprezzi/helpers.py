@@ -8,23 +8,6 @@ from typing import Any
 from .models import Brand, Fuel, GPSCoordinates, Marker, Service, Station
 
 
-def gps_coordinates_from_json(json: dict[str, Any]) -> GPSCoordinates:
-    """Create a GPS Coordinates from JSON."""
-    return GPSCoordinates(
-        latitude=json.get("lat", 0),
-        longitude=json.get("lng", 0),
-    )
-
-
-def marker_from_json(json: dict[str, Any]) -> Marker:
-    """Create a marker from JSON."""
-    return Marker(
-        type=json.get("tipoFile", ""),
-        extension=json.get("estensione", ""),
-        content=json.get("content", ""),
-    )
-
-
 def brand_from_json(json: dict[str, Any]) -> Brand:
     """Create a brand from JSON."""
     return Brand(
@@ -48,6 +31,23 @@ def fuel_from_json(json: dict[str, Any]) -> Fuel:
         validity_date=datetime.fromisoformat(json["validityDate"])
         if "validityDate" in json
         else None,
+    )
+
+
+def gps_coordinates_from_json(json: dict[str, Any]) -> GPSCoordinates:
+    """Create a GPS Coordinates from JSON."""
+    return GPSCoordinates(
+        latitude=json.get("lat", 0),
+        longitude=json.get("lng", 0),
+    )
+
+
+def marker_from_json(json: dict[str, Any]) -> Marker:
+    """Create a marker from JSON."""
+    return Marker(
+        type=json.get("tipoFile", ""),
+        extension=json.get("estensione", ""),
+        content=json.get("content", ""),
     )
 
 
