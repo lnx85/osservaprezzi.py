@@ -156,7 +156,7 @@ async def test_stations(
                 "email": "",
                 "website": "",
                 "company": "Ugo Legozzi",
-                "services": [],
+                "services": [{"id": 6, "description": "Bancomat"}],
             },
         ),
     ],
